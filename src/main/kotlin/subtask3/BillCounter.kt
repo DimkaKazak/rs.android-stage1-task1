@@ -2,9 +2,14 @@ package subtask3
 
 class BillCounter {
 
-    // TODO: Complete the following function
-    // The output could be "Bon Appetit" or the string with number(e.g "10")
     fun calculateFairlySplit(bill: IntArray, k: Int, b: Int): String {
-        throw NotImplementedError("Not implemented")
+        var BrianBill =  bill.sum() / 2
+        var AnnBill = BrianBill - bill[k] / 2
+
+        if( AnnBill == b){
+            return "Bon Appetit"
+        }
+
+        return (kotlin.math.abs(AnnBill - b)).toString()
     }
 }
